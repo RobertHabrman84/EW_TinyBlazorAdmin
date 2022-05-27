@@ -23,8 +23,8 @@ namespace TinyBlazorAdmin.Data
             IAccessTokenProvider provider,
             NavigationManager navigation) : base(provider, navigation)
         {
-            var section = config.GetSection("AadAppRegistration");
-            Endpoint = section.GetValue<string>("Uri");
+            var section = config.GetSection(nameof(UrlShortenerSecuredService));
+            Uri = section.GetValue<string>(nameof(Uri));
             ConfigureHandler(
                 new[] { Endpoint },
                 new[] { string.Concat(Endpoint, "user_impersonation") }
