@@ -10,6 +10,8 @@ namespace TinyBlazorAdmin.Data
     public class AzFuncAuthorizationMessageHandler : AuthorizationMessageHandler
     {
         public string Endpoint { get; set; }
+        
+        public string Uri { get; set; }
 
         /// <summary>
         /// Creates a new instance of the <see cref="AzFuncAuthorizationMessageHandler"/>
